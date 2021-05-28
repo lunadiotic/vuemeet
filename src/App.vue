@@ -1,32 +1,29 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <Navigation/>
     <router-view />
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+import Navigation from '@/components/Navigation'
+export default {
+  components: {
+    Navigation
   }
 }
+</script>
+
+<style lang="scss">
+// https://coolors.co/1a535c-2e8670-4ecdc4-cdf3eb-f7fff7-ff6b6b-ffe66d-a0cf78
+
+$primary: #1a535c; 
+$secondary: #2E8670; 
+$info: #4ECDC4; 
+$success: #A0CF78; 
+$warning: #FFE66D; 
+$danger: #FF6B6B; 
+$light: #F7FFF7; 
+
+@import 'node_modules/bootstrap/scss/bootstrap';
 </style>
